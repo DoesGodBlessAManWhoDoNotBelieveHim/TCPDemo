@@ -9,7 +9,6 @@
 #import "CustomTabBarController.h"
 
 #import "AppDelegate.h"
-#import "UIButton+CentreImageAndTitle.h"
 
 @implementation CustomTabBarController
 

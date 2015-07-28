@@ -12,8 +12,6 @@
 
 #import "CustomButton.h"
 
-#import "UIButton+CentreImageAndTitle.h"
-
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *tipButton;
