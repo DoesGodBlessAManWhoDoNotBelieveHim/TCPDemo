@@ -37,7 +37,7 @@
 
 + (instancetype)shareInstance;
 
-- (void)startListeningPort:(NSInteger)port;
+- (void)startListeningPort:(NSInteger)port error:(NSError **)err;
 
 - (void)disAllConnect;
 

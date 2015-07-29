@@ -26,8 +26,17 @@
 }
 
 - (IBAction)bind:(id)sender {
-    [[TCPServerTool shareInstance]startListeningPort:_portTextField.stringValue.integerValue];
+    NSError *error;
+    [[TCPServerTool shareInstance]startListeningPort:_portTextField.stringValue.integerValue error:&error];
+    
+    //监听出错，弹出会话框
+    if (error) {
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert beginSheetModalForWindow:[self.view window]completionHandler:nil];
+    }
+    
     _portTextField.enabled =![[TCPServerTool shareInstance] listenning];
+    
 }
 - (void)updateView{
     _curtainsOpen = [[[NSUserDefaults standardUserDefaults]objectForKey:key_CurtainsOpen] integerValue]==1;

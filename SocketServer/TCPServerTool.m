@@ -31,10 +31,24 @@ static TCPServerTool *_instance;
     return _serverSocket;
 }
 
-- (void)startListeningPort:(NSInteger)port{
-    NSLog(@"start listhening!");
-    _listenning = YES;
-    [self.serverSocket acceptOnPort:port error:nil];
+- (void)startListeningPort:(NSInteger)port error:(NSError **)err{
+    
+    if (!_listenning) {
+        [self.serverSocket acceptOnPort:port error:err];
+        if (!(*err)) {
+            _listenning = YES;
+            NSLog(@"start listhening!");
+        }
+        else{
+            NSLog(@"监听失败：%@",*err);
+        }
+    }
+    else{
+        _listenning = NO;
+        // 先断开
+        [self.serverSocket disconnect];
+    }
+    
 }
 
 - (void)disAllConnect{

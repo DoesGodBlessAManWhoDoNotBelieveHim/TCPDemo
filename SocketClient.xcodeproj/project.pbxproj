@@ -170,6 +170,7 @@
 		18F75BE31B5E714F00842875 = {
 			isa = PBXGroup;
 			children = (
+				788FBD901B5F2385009E7D15 /* 3rd source */,
 				18F75BEE1B5E714F00842875 /* SocketClient */,
 				78367C271B606F5C00A105BF /* SocketServer */,
 				18F75BED1B5E714F00842875 /* Products */,
@@ -191,7 +192,6 @@
 				788FBDDA1B5F4C70009E7D15 /* CustomView */,
 				788FBDC71B5F27C3009E7D15 /* Tools */,
 				788FBD921B5F23AC009E7D15 /* Images */,
-				788FBD901B5F2385009E7D15 /* 3rd source */,
 				18F75BF31B5E714F00842875 /* AppDelegate.h */,
 				18F75BF41B5E714F00842875 /* AppDelegate.m */,
 				18F75BF61B5E714F00842875 /* ViewController.h */,
@@ -258,6 +258,7 @@
 				788FBD911B5F2393009E7D15 /* GCDAsyncSocket */,
 			);
 			name = "3rd source";
+			path = SocketClient;
 			sourceTree = "<group>";
 		};
 		788FBD911B5F2393009E7D15 /* GCDAsyncSocket */ = {
